@@ -1,0 +1,3 @@
+#Academia del saber (Ads) Aplicacion dedicada a ayudar a los estudiantes de secundaria. en nuestra aplicacion el estudiante debe crear su cuenta, luego de esto elige la asignatura en la que desea reforzar sus conocimientos, cada asignatura contara con una  lista de cursos relacionados a la asignatura que eligio, luego podra  estudiar y al final el podra obtener un certificado virtual que podra publicar en su perfil de estudiante, el docente  por su parte podra subir y editar cursos. habra una parte de interaccion con el docente y estudiante a traves de un chat, esta opcion sera para cosultas directas y sera opcion premium.
+
+Para ver  el codigo: Ir a la rama flutterflow, luego ir a la carpeta lib, en la carpeta lib tenemos todas las carpetas con nuestras vistas de app.
