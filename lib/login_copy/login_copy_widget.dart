@@ -4,14 +4,14 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginWidget extends StatefulWidget {
-  const LoginWidget({Key? key}) : super(key: key);
+class LoginCopyWidget extends StatefulWidget {
+  const LoginCopyWidget({Key? key}) : super(key: key);
 
   @override
-  _LoginWidgetState createState() => _LoginWidgetState();
+  _LoginCopyWidgetState createState() => _LoginCopyWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget> {
+class _LoginCopyWidgetState extends State<LoginCopyWidget> {
   TextEditingController? textController1;
   TextEditingController? textController2;
   final scaffoldKey = GlobalKey<ScaffoldState>();

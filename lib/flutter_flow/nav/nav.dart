@@ -29,22 +29,32 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => InicioWidget(),
+      errorBuilder: (context, _) => LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => InicioWidget(),
+          builder: (context, _) => LoginWidget(),
           routes: [
+            FFRoute(
+              name: 'login',
+              path: 'login',
+              builder: (context, params) => LoginWidget(),
+            ),
             FFRoute(
               name: 'Inicio',
               path: 'inicio',
               builder: (context, params) => InicioWidget(),
             ),
             FFRoute(
-              name: 'login',
-              path: 'login',
-              builder: (context, params) => LoginWidget(),
+              name: 'loginCopy',
+              path: 'loginCopy',
+              builder: (context, params) => LoginCopyWidget(),
+            ),
+            FFRoute(
+              name: 'escuelas',
+              path: 'escuelas',
+              builder: (context, params) => EscuelasWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
