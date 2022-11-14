@@ -55,6 +55,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'escuelas',
               path: 'escuelas',
               builder: (context, params) => EscuelasWidget(),
+            ),
+            FFRoute(
+              name: 'cursos',
+              path: 'cursos',
+              builder: (context, params) => CursosWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
