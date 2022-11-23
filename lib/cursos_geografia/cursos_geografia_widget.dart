@@ -6,14 +6,14 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CursosWidget extends StatefulWidget {
-  const CursosWidget({Key? key}) : super(key: key);
+class CursosGeografiaWidget extends StatefulWidget {
+  const CursosGeografiaWidget({Key? key}) : super(key: key);
 
   @override
-  _CursosWidgetState createState() => _CursosWidgetState();
+  _CursosGeografiaWidgetState createState() => _CursosGeografiaWidgetState();
 }
 
-class _CursosWidgetState extends State<CursosWidget> {
+class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
   TextEditingController? textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -33,9 +33,9 @@ class _CursosWidgetState extends State<CursosWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: Color(0xFFF1F4F8),
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Color(0xFFF1F4F8),
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -44,16 +44,21 @@ class _CursosWidgetState extends State<CursosWidget> {
           buttonSize: 54,
           icon: Icon(
             Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.of(context).secondaryText,
+            color: Color(0xFF57636C),
             size: 24,
           ),
-          onPressed: () async {
-            context.pushNamed('escuelas');
+          onPressed: () {
+            print('IconButton pressed ...');
           },
         ),
         title: Text(
-          'Cursos de ingles.',
-          style: FlutterFlowTheme.of(context).title3,
+          'Cursos de Geografía',
+          style: FlutterFlowTheme.of(context).title3.override(
+                fontFamily: 'Poppins',
+                color: FlutterFlowTheme.of(context).primaryText,
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -82,8 +87,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                         autofocus: true,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelText: 'Busca un Curso.',
-                          labelStyle: FlutterFlowTheme.of(context).bodyText2,
+                          labelText: 'Buca un curso.',
+                          labelStyle:
+                              FlutterFlowTheme.of(context).bodyText2.override(
+                                    fontFamily: 'Outfit',
+                                    color: Color(0xFF57636C),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                  ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
@@ -113,10 +124,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                             borderRadius: BorderRadius.circular(12),
                           ),
                           filled: true,
-                          fillColor:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          fillColor: Colors.white,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Outfit',
+                              color: Color(0xFF1D2429),
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
                         maxLines: null,
                       ),
                     ),
@@ -129,7 +144,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         buttonSize: 44,
                         icon: Icon(
                           Icons.search_rounded,
-                          color: FlutterFlowTheme.of(context).primaryText,
+                          color: Color(0xFF1D2429),
                           size: 24,
                         ),
                         onPressed: () {
@@ -143,15 +158,20 @@ class _CursosWidgetState extends State<CursosWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                 child: Text(
-                  'Docentes del curso',
-                  style: FlutterFlowTheme.of(context).bodyText2,
+                  'Doventes del curso',
+                  style: FlutterFlowTheme.of(context).bodyText2.override(
+                        fontFamily: 'Poppins',
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
                 ),
               ),
               Container(
                 width: double.infinity,
                 height: 170,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).primaryBackground,
+                  color: Color(0xFFF1F4F8),
                 ),
                 child: ListView(
                   padding: EdgeInsets.zero,
@@ -165,8 +185,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         width: 160,
                         height: 100,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -196,16 +215,30 @@ class _CursosWidgetState extends State<CursosWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                                 child: Text(
-                                  'Profe Favio',
-                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                  'Estela Pauth',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF1D2429),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                      ),
                                 ),
                               ),
                               Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Ingles B2',
-                                  style: FlutterFlowTheme.of(context).bodyText2,
+                                  'Geografía',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText2
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                      ),
                                 ),
                               ),
                             ],
@@ -219,8 +252,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         width: 160,
                         height: 100,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -250,16 +282,30 @@ class _CursosWidgetState extends State<CursosWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                                 child: Text(
-                                  'Profe Iskra',
-                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                  'UserName',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF1D2429),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                      ),
                                 ),
                               ),
                               Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Ingles A1',
-                                  style: FlutterFlowTheme.of(context).bodyText2,
+                                  'Remove',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText2
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                      ),
                                 ),
                               ),
                             ],
@@ -273,8 +319,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         width: 160,
                         height: 100,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -305,7 +350,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                                 child: Text(
                                   'UserName',
-                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF1D2429),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                      ),
                                 ),
                               ),
                               Padding(
@@ -313,7 +365,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
                                   'Remove',
-                                  style: FlutterFlowTheme.of(context).bodyText2,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText2
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        color: Color(0xFF57636C),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                      ),
                                 ),
                               ),
                             ],
@@ -328,7 +387,12 @@ class _CursosWidgetState extends State<CursosWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                 child: Text(
                   'Cursos Disponibles',
-                  style: FlutterFlowTheme.of(context).bodyText2,
+                  style: FlutterFlowTheme.of(context).bodyText2.override(
+                        fontFamily: 'Poppins',
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
                 ),
               ),
               Padding(
@@ -345,8 +409,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         width: double.infinity,
                         height: 50,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -364,8 +427,8 @@ class _CursosWidgetState extends State<CursosWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.asset(
-                                  'assets/images/INGLES.png',
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -385,12 +448,16 @@ class _CursosWidgetState extends State<CursosWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            'Verbo To Be',
+                                            'Países',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2
                                                 .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: Colors.black,
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                           ),
                                         ],
@@ -400,15 +467,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('clase1ingles');
+                                onPressed: () {
+                                  print('Button pressed ...');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
                                   width: 70,
                                   height: 36,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: Color(0xFF4B39EF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -434,8 +500,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         width: double.infinity,
                         height: 50,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -453,8 +518,8 @@ class _CursosWidgetState extends State<CursosWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.asset(
-                                  'assets/images/INGLES.png',
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -474,12 +539,16 @@ class _CursosWidgetState extends State<CursosWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            'Palabras Interrogativas',
+                                            'Islas',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2
                                                 .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: Colors.black,
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                           ),
                                         ],
@@ -489,15 +558,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('clase2ingles');
+                                onPressed: () {
+                                  print('Button pressed ...');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
                                   width: 70,
                                   height: 36,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: Color(0xFF4B39EF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -523,8 +591,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         width: double.infinity,
                         height: 50,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -542,8 +609,8 @@ class _CursosWidgetState extends State<CursosWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.asset(
-                                  'assets/images/INGLES.png',
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -563,12 +630,16 @@ class _CursosWidgetState extends State<CursosWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            'Pronombres Personales',
+                                            'Usos horarios',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2
                                                 .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: Colors.black,
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                           ),
                                         ],
@@ -578,15 +649,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('clase3ingles');
+                                onPressed: () {
+                                  print('Button pressed ...');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
                                   width: 70,
                                   height: 36,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: Color(0xFF4B39EF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -612,8 +682,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         width: double.infinity,
                         height: 50,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -631,8 +700,8 @@ class _CursosWidgetState extends State<CursosWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.asset(
-                                  'assets/images/INGLES.png',
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -652,12 +721,16 @@ class _CursosWidgetState extends State<CursosWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            'Numeros Cardinales',
+                                            'Fenómenos',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2
                                                 .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: Colors.black,
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                           ),
                                         ],
@@ -667,15 +740,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('clase4ingles');
+                                onPressed: () {
+                                  print('Button pressed ...');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
                                   width: 70,
                                   height: 36,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: Color(0xFF4B39EF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -701,8 +773,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         width: double.infinity,
                         height: 50,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -720,8 +791,8 @@ class _CursosWidgetState extends State<CursosWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.asset(
-                                  'assets/images/INGLES.png',
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -741,12 +812,16 @@ class _CursosWidgetState extends State<CursosWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            'Adjetivos Posesivos',
+                                            'Los océanos',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2
                                                 .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: Colors.black,
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                           ),
                                         ],
@@ -756,15 +831,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('clase5ingles');
+                                onPressed: () {
+                                  print('Button pressed ...');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
                                   width: 70,
                                   height: 36,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: Color(0xFF4B39EF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
@@ -790,8 +864,7 @@ class _CursosWidgetState extends State<CursosWidget> {
                         width: double.infinity,
                         height: 50,
                         decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
+                          color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               blurRadius: 4,
@@ -809,8 +882,8 @@ class _CursosWidgetState extends State<CursosWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.asset(
-                                  'assets/images/INGLES.png',
+                                child: Image.network(
+                                  'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -830,12 +903,16 @@ class _CursosWidgetState extends State<CursosWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            'Articulos Indefinidos',
+                                            'La flora de América',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2
                                                 .override(
-                                                  fontFamily: 'Poppins',
-                                                  color: Colors.black,
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w600,
                                                 ),
                                           ),
                                         ],
@@ -845,15 +922,14 @@ class _CursosWidgetState extends State<CursosWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('clase6ingles');
+                                onPressed: () {
+                                  print('Button pressed ...');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
                                   width: 70,
                                   height: 36,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
+                                  color: Color(0xFF4B39EF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(

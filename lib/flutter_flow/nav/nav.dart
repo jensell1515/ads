@@ -29,13 +29,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => LoginWidget(),
+      errorBuilder: (context, _) => LoginCopyWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => LoginWidget(),
+          builder: (context, _) => LoginCopyWidget(),
           routes: [
+            FFRoute(
+              name: 'loginCopy',
+              path: 'loginCopy',
+              builder: (context, params) => LoginCopyWidget(),
+            ),
             FFRoute(
               name: 'login',
               path: 'login',
@@ -47,11 +52,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => InicioWidget(),
             ),
             FFRoute(
-              name: 'loginCopy',
-              path: 'loginCopy',
-              builder: (context, params) => LoginCopyWidget(),
-            ),
-            FFRoute(
               name: 'escuelas',
               path: 'escuelas',
               builder: (context, params) => EscuelasWidget(),
@@ -60,6 +60,76 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'cursos',
               path: 'cursos',
               builder: (context, params) => CursosWidget(),
+            ),
+            FFRoute(
+              name: 'cursosociales',
+              path: 'cursosociales',
+              builder: (context, params) => CursosocialesWidget(),
+            ),
+            FFRoute(
+              name: 'cursoquimica',
+              path: 'cursoquimica',
+              builder: (context, params) => CursoquimicaWidget(),
+            ),
+            FFRoute(
+              name: 'Cursodelengua',
+              path: 'cursodelengua',
+              builder: (context, params) => CursodelenguaWidget(),
+            ),
+            FFRoute(
+              name: 'CursosAEP',
+              path: 'cursosAEP',
+              builder: (context, params) => CursosAEPWidget(),
+            ),
+            FFRoute(
+              name: 'CursoMatematica',
+              path: 'cursoMatematica',
+              builder: (context, params) => CursoMatematicaWidget(),
+            ),
+            FFRoute(
+              name: 'CursosTAC',
+              path: 'cursosTAC',
+              builder: (context, params) => CursosTACWidget(),
+            ),
+            FFRoute(
+              name: 'cursosGeografia',
+              path: 'cursosGeografia',
+              builder: (context, params) => CursosGeografiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase1ingles',
+              path: 'clase1ingles',
+              builder: (context, params) => Clase1inglesWidget(),
+            ),
+            FFRoute(
+              name: 'clase2ingles',
+              path: 'clase2ingles',
+              builder: (context, params) => Clase2inglesWidget(),
+            ),
+            FFRoute(
+              name: 'clase3ingles',
+              path: 'clase3ingles',
+              builder: (context, params) => Clase3inglesWidget(),
+            ),
+            FFRoute(
+              name: 'clase4ingles',
+              path: 'clase4ingles',
+              builder: (context, params) => Clase4inglesWidget(),
+            ),
+            FFRoute(
+              name: 'clase5ingles',
+              path: 'clase5ingles',
+              builder: (context, params) => Clase5inglesWidget(),
+            ),
+            FFRoute(
+              name: 'clase6ingles',
+              path: 'clase6ingles',
+              builder: (context, params) => Clase6inglesWidget(),
+            ),
+            FFRoute(
+              name: 'clase1Historia',
+              path: 'clase1Historia',
+              builder: (context, params) => Clase1HistoriaWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

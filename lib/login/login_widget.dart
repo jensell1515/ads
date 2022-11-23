@@ -188,8 +188,8 @@ class _LoginWidgetState extends State<LoginWidget> {
               Align(
                 alignment: AlignmentDirectional(-0.03, 0.33),
                 child: FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
+                  onPressed: () async {
+                    context.pushNamed('escuelas');
                   },
                   text: 'Iniciar Sesion',
                   options: FFButtonOptions(

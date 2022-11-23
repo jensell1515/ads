@@ -172,23 +172,184 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                       ),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                'assets/images/QUIMICA.png',
-                                width: double.infinity,
-                                height: 115,
-                                fit: BoxFit.cover,
+                        child: InkWell(
+                          onTap: () async {
+                            context.pushNamed('cursoquimica');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  'assets/images/QUIMICA.png',
+                                  width: double.infinity,
+                                  height: 115,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
+                              Align(
+                                alignment: AlignmentDirectional(0.1, 0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      8, 12, 0, 0),
+                                  child: Text(
+                                    '¡Estudia aqui!',
+                                    style:
+                                        FlutterFlowTheme.of(context).subtitle1,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.45,
+                      height: 190,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4,
+                            color: Color(0x230E151B),
+                            offset: Offset(0, 2),
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                        child: InkWell(
+                          onTap: () async {
+                            context.pushNamed('CursoMatematica');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  'assets/images/MATEMATICAS.png',
+                                  width: double.infinity,
+                                  height: 115,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Align(
+                                alignment: AlignmentDirectional(-0.25, 0),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      8, 12, 0, 0),
+                                  child: Text(
+                                    '¡Estudia aqui!',
+                                    style:
+                                        FlutterFlowTheme.of(context).subtitle1,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () async {
+                        context.pushNamed('Cursodelengua');
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        height: 190,
+                        decoration: BoxDecoration(
+                          color:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 4,
+                              color: Color(0x230E151B),
+                              offset: Offset(0, 2),
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                          child: InkWell(
+                            onTap: () async {
+                              context.pushNamed('Cursodelengua');
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset(
+                                    'assets/images/lengua.png',
+                                    width: double.infinity,
+                                    height: 115,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(0.1, 0.05),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        8, 12, 0, 0),
+                                    child: Text(
+                                      '¡Estudia aqui!',
+                                      style: FlutterFlowTheme.of(context)
+                                          .subtitle1,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(0.1, 0),
-                              child: Padding(
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.45,
+                      height: 190,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 4,
+                            color: Color(0x230E151B),
+                            offset: Offset(0, 2),
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
+                        child: InkWell(
+                          onTap: () async {
+                            context.pushNamed('cursosociales');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  'assets/images/historia.png',
+                                  width: double.infinity,
+                                  height: 128,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(8, 12, 0, 0),
                                 child: Text(
@@ -196,8 +357,8 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                                   style: FlutterFlowTheme.of(context).subtitle1,
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -217,23 +378,25 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                       ),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                'assets/images/MATEMATICAS.png',
-                                width: double.infinity,
-                                height: 115,
-                                fit: BoxFit.cover,
+                        child: InkWell(
+                          onTap: () async {
+                            context.pushNamed('cursosGeografia');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  'assets/images/GEOGRAFIA.png',
+                                  width: double.infinity,
+                                  height: 128,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(-0.25, 0),
-                              child: Padding(
+                              Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(8, 12, 0, 0),
                                 child: Text(
@@ -241,8 +404,8 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                                   style: FlutterFlowTheme.of(context).subtitle1,
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -262,23 +425,25 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                       ),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                'assets/images/lengua.png',
-                                width: double.infinity,
-                                height: 115,
-                                fit: BoxFit.cover,
+                        child: InkWell(
+                          onTap: () async {
+                            context.pushNamed('cursos');
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  'assets/images/INGLES.png',
+                                  width: double.infinity,
+                                  height: 120,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.1, 0.05),
-                              child: Padding(
+                              Padding(
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(8, 12, 0, 0),
                                 child: Text(
@@ -286,134 +451,8 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                                   style: FlutterFlowTheme.of(context).subtitle1,
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      height: 190,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 4,
-                            color: Color(0x230E151B),
-                            offset: Offset(0, 2),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                'assets/images/historia.png',
-                                width: double.infinity,
-                                height: 128,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(8, 12, 0, 0),
-                              child: Text(
-                                '¡Estudia aqui!',
-                                style: FlutterFlowTheme.of(context).subtitle1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      height: 190,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 4,
-                            color: Color(0x230E151B),
-                            offset: Offset(0, 2),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                'assets/images/GEOGRAFIA.png',
-                                width: double.infinity,
-                                height: 128,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(8, 12, 0, 0),
-                              child: Text(
-                                '¡Estudia aqui!',
-                                style: FlutterFlowTheme.of(context).subtitle1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.45,
-                      height: 190,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 4,
-                            color: Color(0x230E151B),
-                            offset: Offset(0, 2),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.asset(
-                                'assets/images/INGLES.png',
-                                width: double.infinity,
-                                height: 120,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(8, 12, 0, 0),
-                              child: Text(
-                                '¡Estudia aqui!',
-                                style: FlutterFlowTheme.of(context).subtitle1,
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
