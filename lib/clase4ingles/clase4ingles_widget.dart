@@ -24,7 +24,7 @@ class _Clase4inglesWidgetState extends State<Clase4inglesWidget> {
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
-            context.pop();
+            context.pushNamed('escuelas');
           },
           child: Icon(
             Icons.chevron_left_rounded,
@@ -51,10 +51,10 @@ class _Clase4inglesWidgetState extends State<Clase4inglesWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Image.asset(
-                  'assets/images/john-arano-h4i9G-de7Po-unsplash.jpg',
+                  'assets/images/numero.webp',
                   width: MediaQuery.of(context).size.width,
                   height: 230,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -116,7 +116,7 @@ class _Clase4inglesWidgetState extends State<Clase4inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      '30m | High Intensity | Indoor/Outdoor',
+                      'Algunos estudiantes:',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).primaryColor,
@@ -361,10 +361,10 @@ class _Clase4inglesWidgetState extends State<Clase4inglesWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 24),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('ButtonPrimary pressed ...');
+                onPressed: () async {
+                  context.pushNamed('premium');
                 },
-                text: 'Reserve Spot',
+                text: 'Ver más cursos',
                 options: FFButtonOptions(
                   width: 300,
                   height: 60,

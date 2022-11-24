@@ -6,14 +6,14 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CursosWidget extends StatefulWidget {
-  const CursosWidget({Key? key}) : super(key: key);
+class CursoinglesWidget extends StatefulWidget {
+  const CursoinglesWidget({Key? key}) : super(key: key);
 
   @override
-  _CursosWidgetState createState() => _CursosWidgetState();
+  _CursoinglesWidgetState createState() => _CursoinglesWidgetState();
 }
 
-class _CursosWidgetState extends State<CursosWidget> {
+class _CursoinglesWidgetState extends State<CursoinglesWidget> {
   TextEditingController? textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -197,7 +197,13 @@ class _CursosWidgetState extends State<CursosWidget> {
                                     EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                                 child: Text(
                                   'Profe Favio',
-                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                      ),
                                 ),
                               ),
                               Padding(

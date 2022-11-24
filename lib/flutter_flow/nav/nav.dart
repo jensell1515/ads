@@ -29,18 +29,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => LoginCopyWidget(),
+      errorBuilder: (context, _) => LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => LoginCopyWidget(),
+          builder: (context, _) => LoginWidget(),
           routes: [
-            FFRoute(
-              name: 'loginCopy',
-              path: 'loginCopy',
-              builder: (context, params) => LoginCopyWidget(),
-            ),
             FFRoute(
               name: 'login',
               path: 'login',
@@ -57,14 +52,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => EscuelasWidget(),
             ),
             FFRoute(
-              name: 'cursos',
-              path: 'cursos',
-              builder: (context, params) => CursosWidget(),
+              name: 'cursoingles',
+              path: 'cursoingles',
+              builder: (context, params) => CursoinglesWidget(),
             ),
             FFRoute(
-              name: 'cursosociales',
-              path: 'cursosociales',
-              builder: (context, params) => CursosocialesWidget(),
+              name: 'cursohistoria',
+              path: 'cursohistoria',
+              builder: (context, params) => CursohistoriaWidget(),
             ),
             FFRoute(
               name: 'cursoquimica',
@@ -130,6 +125,51 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'clase1Historia',
               path: 'clase1Historia',
               builder: (context, params) => Clase1HistoriaWidget(),
+            ),
+            FFRoute(
+              name: 'clase2historia',
+              path: 'clase2historia',
+              builder: (context, params) => Clase2historiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase3historia',
+              path: 'clase3historia',
+              builder: (context, params) => Clase3historiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase4historia',
+              path: 'clase4historia',
+              builder: (context, params) => Clase4historiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase5historia',
+              path: 'clase5historia',
+              builder: (context, params) => Clase5historiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase6historia',
+              path: 'clase6historia',
+              builder: (context, params) => Clase6historiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase1quimica',
+              path: 'clase1quimica',
+              builder: (context, params) => Clase1quimicaWidget(),
+            ),
+            FFRoute(
+              name: 'clase2quimica',
+              path: 'clase2quimica',
+              builder: (context, params) => Clase2quimicaWidget(),
+            ),
+            FFRoute(
+              name: 'clase3quimica',
+              path: 'clase3quimica',
+              builder: (context, params) => Clase3quimicaWidget(),
+            ),
+            FFRoute(
+              name: 'premium',
+              path: 'premium',
+              builder: (context, params) => PremiumWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

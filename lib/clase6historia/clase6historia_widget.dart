@@ -4,14 +4,14 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Clase1inglesWidget extends StatefulWidget {
-  const Clase1inglesWidget({Key? key}) : super(key: key);
+class Clase6historiaWidget extends StatefulWidget {
+  const Clase6historiaWidget({Key? key}) : super(key: key);
 
   @override
-  _Clase1inglesWidgetState createState() => _Clase1inglesWidgetState();
+  _Clase6historiaWidgetState createState() => _Clase6historiaWidgetState();
 }
 
-class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
+class _Clase6historiaWidgetState extends State<Clase6historiaWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -24,7 +24,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
-            context.pushNamed('cursoingles');
+            context.pop();
           },
           child: Icon(
             Icons.chevron_left_rounded,
@@ -33,11 +33,8 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
           ),
         ),
         title: Text(
-          'Verbo to Be',
-          style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Poppins',
-                color: Colors.black,
-              ),
+          'Antigua Grecia y Roma',
+          style: FlutterFlowTheme.of(context).title2,
         ),
         actions: [],
         centerTitle: false,
@@ -51,10 +48,10 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Image.asset(
-                  'assets/images/verbs.jpg',
+                  'assets/images/oie_jpg.png',
                   width: MediaQuery.of(context).size.width,
                   height: 230,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -65,11 +62,8 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Verbo to Be',
-                      style: FlutterFlowTheme.of(context).title2.override(
-                            fontFamily: 'Poppins',
-                            color: Colors.black,
-                          ),
+                      'Antigua Grecia y Roma',
+                      style: FlutterFlowTheme.of(context).title2,
                     ),
                   ),
                 ],
@@ -82,7 +76,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      '5 horas',
+                      '4 horas',
                       style: FlutterFlowTheme.of(context).subtitle1.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).primaryColor,
@@ -99,11 +93,8 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Sirve para mencionar una acción o estado del sujeto en cualquier tiempo. I am Mexican = Soy mexicano. I was a doctor = Yo era doctor. Se usa en compañía de otros verbos para dar a entender que las acciones o estados se desarrollan en el momento.',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
-                            fontFamily: 'Poppins',
-                            color: Colors.black,
-                          ),
+                      'Grecia y Roma son civilizaciones simultáneas, es decir, se desarrollan al unísono a lo largo del 1er milenio antes de Cristo, sin embargo cuando Grecia vivía su máximo esplendor (siglo V y parte del IV), Roma era un pequeño pueblo situado en el centro de la Península Itálica)',
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     ),
                   ),
                 ],
@@ -168,7 +159,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Hermes Quintanilla',
+                                  'Kye S',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
@@ -224,7 +215,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Marvin Onofre',
+                                  'Jonah M',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
@@ -280,7 +271,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Carlos Pérez',
+                                  'Albert H',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
@@ -361,10 +352,10 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 24),
               child: FFButtonWidget(
-                onPressed: () async {
-                  context.pushNamed('premium');
+                onPressed: () {
+                  print('ButtonPrimary pressed ...');
                 },
-                text: 'Ver más clases',
+                text: 'Ve más clases',
                 options: FFButtonOptions(
                   width: 300,
                   height: 60,

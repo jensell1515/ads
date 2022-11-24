@@ -37,7 +37,7 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'Hello, Emily',
+          'Hola',
           style: FlutterFlowTheme.of(context).title2,
         ),
         actions: [
@@ -136,10 +136,6 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                               color: FlutterFlowTheme.of(context).secondaryText,
                             ),
                       ),
-                    ),
-                    Text(
-                      'See All',
-                      style: FlutterFlowTheme.of(context).bodyText1,
                     ),
                   ],
                 ),
@@ -333,7 +329,7 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
                         child: InkWell(
                           onTap: () async {
-                            context.pushNamed('cursosociales');
+                            context.pushNamed('cursohistoria');
                           },
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -427,7 +423,7 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
                         child: InkWell(
                           onTap: () async {
-                            context.pushNamed('cursos');
+                            context.pushNamed('cursoingles');
                           },
                           child: Column(
                             mainAxisSize: MainAxisSize.max,

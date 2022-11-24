@@ -4,14 +4,14 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Clase1inglesWidget extends StatefulWidget {
-  const Clase1inglesWidget({Key? key}) : super(key: key);
+class Clase5historiaWidget extends StatefulWidget {
+  const Clase5historiaWidget({Key? key}) : super(key: key);
 
   @override
-  _Clase1inglesWidgetState createState() => _Clase1inglesWidgetState();
+  _Clase5historiaWidgetState createState() => _Clase5historiaWidgetState();
 }
 
-class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
+class _Clase5historiaWidgetState extends State<Clase5historiaWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -24,7 +24,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
-            context.pushNamed('cursoingles');
+            context.pop();
           },
           child: Icon(
             Icons.chevron_left_rounded,
@@ -33,7 +33,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
           ),
         ),
         title: Text(
-          'Verbo to Be',
+          'La civilización maya',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Poppins',
                 color: Colors.black,
@@ -51,10 +51,10 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Image.asset(
-                  'assets/images/verbs.jpg',
+                  'assets/images/maya.webp',
                   width: MediaQuery.of(context).size.width,
                   height: 230,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -65,7 +65,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Verbo to Be',
+                      'La civilización maya',
                       style: FlutterFlowTheme.of(context).title2.override(
                             fontFamily: 'Poppins',
                             color: Colors.black,
@@ -82,7 +82,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      '5 horas',
+                      '1 hora',
                       style: FlutterFlowTheme.of(context).subtitle1.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).primaryColor,
@@ -99,11 +99,8 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Sirve para mencionar una acción o estado del sujeto en cualquier tiempo. I am Mexican = Soy mexicano. I was a doctor = Yo era doctor. Se usa en compañía de otros verbos para dar a entender que las acciones o estados se desarrollan en el momento.',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
-                            fontFamily: 'Poppins',
-                            color: Colors.black,
-                          ),
+                      'La civilización o cultura maya fue una de las principales civilizaciones que se desarrolló en la antigua Mesoamérica. Cultura muy destacada por sus elaborados sistemas de escritura, numéricos y por el uso del calendario, así como por su impresionante arte y arquitectura.',
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     ),
                   ),
                 ],
@@ -168,7 +165,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Hermes Quintanilla',
+                                  'Kye S',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
@@ -224,7 +221,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Marvin Onofre',
+                                  'Jonah M',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
@@ -280,7 +277,7 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Carlos Pérez',
+                                  'Albert H',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
@@ -361,8 +358,8 @@ class _Clase1inglesWidgetState extends State<Clase1inglesWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 24),
               child: FFButtonWidget(
-                onPressed: () async {
-                  context.pushNamed('premium');
+                onPressed: () {
+                  print('ButtonPrimary pressed ...');
                 },
                 text: 'Ver más clases',
                 options: FFButtonOptions(

@@ -53,10 +53,10 @@ class _Clase1HistoriaWidgetState extends State<Clase1HistoriaWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Image.asset(
-                  'assets/images/john-arano-h4i9G-de7Po-unsplash.jpg',
+                  'assets/images/continentes.PNG',
                   width: MediaQuery.of(context).size.width,
                   height: 230,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -67,7 +67,7 @@ class _Clase1HistoriaWidgetState extends State<Clase1HistoriaWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Class Name',
+                      'Los continentes',
                       style: FlutterFlowTheme.of(context).title2.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF0F1113),
@@ -86,7 +86,7 @@ class _Clase1HistoriaWidgetState extends State<Clase1HistoriaWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      '10:00am',
+                      '2 horas',
                       style: FlutterFlowTheme.of(context).subtitle1.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF4B39EF),
@@ -105,7 +105,7 @@ class _Clase1HistoriaWidgetState extends State<Clase1HistoriaWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'The best of all 3 worlds, Row & Flow offers high intensity rowing and strength intervals followed by athletic based yoga sure to enhance flexible and clear the mind. Yoga mats are provided but bringing your own yoga mat is highly encouraged.',
+                      'Se considera como continente a una gran extensión de tierra que se diferencia de otras menores o sumergidas por conceptos geográficos, como son los océanos; culturales, como la etnografía; y la historia de cada uno.',
                       style: FlutterFlowTheme.of(context).bodyText2.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF57636C),
@@ -124,7 +124,7 @@ class _Clase1HistoriaWidgetState extends State<Clase1HistoriaWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      '30m | High Intensity | Indoor/Outdoor',
+                      'Algunos estudiantes:',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Outfit',
                             color: Color(0xFF4B39EF),
@@ -370,7 +370,7 @@ class _Clase1HistoriaWidgetState extends State<Clase1HistoriaWidget> {
                 onPressed: () {
                   print('ButtonPrimary pressed ...');
                 },
-                text: 'Reserve Spot',
+                text: 'Ver más clases',
                 options: FFButtonOptions(
                   width: 300,
                   height: 60,

@@ -2,6 +2,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Clase5inglesWidget extends StatefulWidget {
@@ -15,6 +16,15 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
+  void initState() {
+    super.initState();
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      context.pushNamed('escuelas');
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
@@ -24,7 +34,7 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
-            context.pop();
+            context.pushNamed('cursoingles');
           },
           child: Icon(
             Icons.chevron_left_rounded,
@@ -84,7 +94,7 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      '10:00am',
+                      '2 horas',
                       style: FlutterFlowTheme.of(context).subtitle1.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).primaryColor,
@@ -115,7 +125,7 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Algunos estudiantes...',
+                      'Algunos estudiantes:',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).primaryColor,
@@ -360,10 +370,10 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 24),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('ButtonPrimary pressed ...');
+                onPressed: () async {
+                  context.pushNamed('premium');
                 },
-                text: 'Reserve Spot',
+                text: 'Ver más cursos',
                 options: FFButtonOptions(
                   width: 300,
                   height: 60,

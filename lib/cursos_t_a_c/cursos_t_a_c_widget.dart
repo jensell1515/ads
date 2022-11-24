@@ -116,7 +116,10 @@ class _CursosTACWidgetState extends State<CursosTACWidget> {
                           fillColor:
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1,
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Poppins',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                            ),
                         maxLines: null,
                       ),
                     ),

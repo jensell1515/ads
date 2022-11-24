@@ -47,8 +47,8 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
             color: FlutterFlowTheme.of(context).secondaryText,
             size: 24,
           ),
-          onPressed: () {
-            print('IconButton pressed ...');
+          onPressed: () async {
+            context.pushNamed('escuelas');
           },
         ),
         title: Text(
@@ -204,7 +204,7 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Matematica',
+                                  'Matemática',
                                   style: FlutterFlowTheme.of(context).bodyText2,
                                 ),
                               ),
@@ -385,7 +385,7 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            'Operaciones basicas',
+                                            'Operaciones básicas',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2
                                                 .override(
@@ -560,7 +560,7 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Numeros enteros y decimales',
+                                        'Números enteros y decimales',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1,
                                       ),
@@ -640,7 +640,7 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Introduccion de algebra',
+                                        'Introducción de algebra',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyText1,
                                       ),

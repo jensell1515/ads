@@ -6,14 +6,14 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CursosocialesWidget extends StatefulWidget {
-  const CursosocialesWidget({Key? key}) : super(key: key);
+class CursohistoriaWidget extends StatefulWidget {
+  const CursohistoriaWidget({Key? key}) : super(key: key);
 
   @override
-  _CursosocialesWidgetState createState() => _CursosocialesWidgetState();
+  _CursohistoriaWidgetState createState() => _CursohistoriaWidgetState();
 }
 
-class _CursosocialesWidgetState extends State<CursosocialesWidget> {
+class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
   TextEditingController? textController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -218,9 +218,10 @@ class _CursosocialesWidgetState extends State<CursosocialesWidget> {
                                       .bodyText1
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: Color(0xFF1D2429),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         fontSize: 14,
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                 ),
                               ),
@@ -235,7 +236,7 @@ class _CursosocialesWidgetState extends State<CursosocialesWidget> {
                                         fontFamily: 'Outfit',
                                         color: Color(0xFF57636C),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                 ),
                               ),
@@ -465,8 +466,8 @@ class _CursosocialesWidgetState extends State<CursosocialesWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase1Historia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -537,7 +538,7 @@ class _CursosocialesWidgetState extends State<CursosocialesWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Text(
-                                            'Las epocas',
+                                            'La epoca de los metales',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyText2
                                                 .override(
@@ -556,8 +557,8 @@ class _CursosocialesWidgetState extends State<CursosocialesWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase2historia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -647,8 +648,8 @@ class _CursosocialesWidgetState extends State<CursosocialesWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase3historia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -738,8 +739,8 @@ class _CursosocialesWidgetState extends State<CursosocialesWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase4historia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -829,8 +830,8 @@ class _CursosocialesWidgetState extends State<CursosocialesWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase5historia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -920,8 +921,8 @@ class _CursosocialesWidgetState extends State<CursosocialesWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase6historia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(

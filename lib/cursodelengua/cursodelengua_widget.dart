@@ -47,8 +47,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
             color: FlutterFlowTheme.of(context).secondaryText,
             size: 24,
           ),
-          onPressed: () {
-            print('IconButton pressed ...');
+          onPressed: () async {
+            context.pushNamed('escuelas');
           },
         ),
         title: Text(

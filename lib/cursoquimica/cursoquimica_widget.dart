@@ -52,7 +52,7 @@ class _CursoquimicaWidgetState extends State<CursoquimicaWidget> {
           },
         ),
         title: Text(
-          'Cursoso de Química',
+          'Cursos de Química',
           style: FlutterFlowTheme.of(context).title3.override(
                 fontFamily: 'Poppins',
                 color: FlutterFlowTheme.of(context).primaryText,
@@ -220,9 +220,9 @@ class _CursoquimicaWidgetState extends State<CursoquimicaWidget> {
                                       .bodyText1
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: Color(0xFF1D2429),
+                                        color: Colors.black,
                                         fontSize: 14,
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                 ),
                               ),

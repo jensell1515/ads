@@ -24,7 +24,7 @@ class _Clase2inglesWidgetState extends State<Clase2inglesWidget> {
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
-            context.pop();
+            context.pushNamed('cursoingles');
           },
           child: Icon(
             Icons.chevron_left_rounded,
@@ -116,7 +116,7 @@ class _Clase2inglesWidgetState extends State<Clase2inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      '30m | High Intensity | Indoor/Outdoor',
+                      'Alguos estudiantes:',
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).primaryColor,
@@ -361,10 +361,10 @@ class _Clase2inglesWidgetState extends State<Clase2inglesWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 24),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('ButtonPrimary pressed ...');
+                onPressed: () async {
+                  context.pushNamed('premium');
                 },
-                text: 'Reserve Spot',
+                text: 'Ver más cursos',
                 options: FFButtonOptions(
                   width: 300,
                   height: 60,

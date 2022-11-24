@@ -47,8 +47,8 @@ class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
             color: Color(0xFF57636C),
             size: 24,
           ),
-          onPressed: () {
-            print('IconButton pressed ...');
+          onPressed: () async {
+            context.pushNamed('escuelas');
           },
         ),
         title: Text(
@@ -127,10 +127,10 @@ class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
                           fillColor: Colors.white,
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Outfit',
-                              color: Color(0xFF1D2429),
+                              fontFamily: 'Poppins',
+                              color: FlutterFlowTheme.of(context).primaryText,
                               fontSize: 14,
-                              fontWeight: FontWeight.normal,
+                              fontWeight: FontWeight.w600,
                             ),
                         maxLines: null,
                       ),
