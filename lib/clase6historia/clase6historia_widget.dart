@@ -34,7 +34,10 @@ class _Clase6historiaWidgetState extends State<Clase6historiaWidget> {
         ),
         title: Text(
           'Antigua Grecia y Roma',
-          style: FlutterFlowTheme.of(context).title2,
+          style: FlutterFlowTheme.of(context).title2.override(
+                fontFamily: 'Poppins',
+                color: Colors.black,
+              ),
         ),
         actions: [],
         centerTitle: false,
@@ -63,7 +66,10 @@ class _Clase6historiaWidgetState extends State<Clase6historiaWidget> {
                   Expanded(
                     child: Text(
                       'Antigua Grecia y Roma',
-                      style: FlutterFlowTheme.of(context).title2,
+                      style: FlutterFlowTheme.of(context).title2.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.black,
+                          ),
                     ),
                   ),
                 ],
@@ -355,7 +361,7 @@ class _Clase6historiaWidgetState extends State<Clase6historiaWidget> {
                 onPressed: () {
                   print('ButtonPrimary pressed ...');
                 },
-                text: 'Ve más clases',
+                text: 'Ver más clases',
                 options: FFButtonOptions(
                   width: 300,
                   height: 60,

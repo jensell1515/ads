@@ -33,7 +33,7 @@ class _Clase3quimicaWidgetState extends State<Clase3quimicaWidget> {
           ),
         ),
         title: Text(
-          'Enlaces quimico',
+          'Compuestos químicos',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Poppins',
                 color: Colors.black,
@@ -51,7 +51,7 @@ class _Clase3quimicaWidgetState extends State<Clase3quimicaWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Image.asset(
-                  'assets/images/enlaces.jpg',
+                  'assets/images/compuestos_q.jpg',
                   width: MediaQuery.of(context).size.width,
                   height: 230,
                   fit: BoxFit.contain,
@@ -65,7 +65,7 @@ class _Clase3quimicaWidgetState extends State<Clase3quimicaWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Enlaces quimico',
+                      'Compuestos químicos',
                       style: FlutterFlowTheme.of(context).title2.override(
                             fontFamily: 'Poppins',
                             color: Colors.black,
@@ -82,7 +82,7 @@ class _Clase3quimicaWidgetState extends State<Clase3quimicaWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      '2 horas',
+                      '3 horas',
                       style: FlutterFlowTheme.of(context).subtitle1.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).primaryColor,
@@ -99,7 +99,7 @@ class _Clase3quimicaWidgetState extends State<Clase3quimicaWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Se entiende por enlace químico a la combinación de átomos para formar compuestos químicos y darle estabilidad al producto resultante. En este proceso, los átomos pueden compartir o ceder electrones de su capa más externa para unirse y crear una nueva sustancia homogénea.\n',
+                      'Un compuesto químico es una sustancia formada por la combinación química de dos o más elementos de la tabla periódica.​ Los compuestos son representados por una fórmula química. Por ejemplo, el agua está constituida por dos átomos de hidrógeno y uno de oxígeno.\nPor ejemplo: azul de metileno (C16H18N3ClS), cloruro férrico (FeCl3), agua (H2O) y metano (CH4).',
                       style: FlutterFlowTheme.of(context).bodyText2,
                     ),
                   ),
@@ -358,8 +358,8 @@ class _Clase3quimicaWidgetState extends State<Clase3quimicaWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 24),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('ButtonPrimary pressed ...');
+                onPressed: () async {
+                  context.pushNamed('premium');
                 },
                 text: 'Ver más clases',
                 options: FFButtonOptions(

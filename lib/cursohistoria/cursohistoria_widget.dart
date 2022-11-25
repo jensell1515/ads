@@ -202,8 +202,8 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(50),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/FB_IMG_1669399466693[1].jpg',
                                   width: 60,
                                   height: 60,
                                   fit: BoxFit.cover,
@@ -270,8 +270,8 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(50),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1614436163996-25cee5f54290?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/FB_IMG_1669391105809[1].jpg',
                                   width: 60,
                                   height: 60,
                                   fit: BoxFit.cover,
@@ -281,14 +281,15 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                                 child: Text(
-                                  'UserName',
+                                  'Santos Morales',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF1D2429),
+                                        fontFamily: 'Roboto',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
                                         fontSize: 14,
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                 ),
                               ),
@@ -296,14 +297,14 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
                                 child: Text(
-                                  'Remove',
+                                  'Hitoria',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
                                       .override(
                                         fontFamily: 'Outfit',
                                         color: Color(0xFF57636C),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.normal,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                 ),
                               ),
@@ -426,8 +427,8 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/historia.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -517,8 +518,8 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/historia.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -608,8 +609,8 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/historia.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -699,8 +700,8 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/historia.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -790,8 +791,8 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/historia.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -881,8 +882,8 @@ class _CursohistoriaWidgetState extends State<CursohistoriaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/historia.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,

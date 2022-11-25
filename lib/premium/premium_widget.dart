@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -59,20 +58,29 @@ class _PremiumWidgetState extends State<PremiumWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-1.03, -1.02),
-                child: FlutterFlowIconButton(
-                  borderColor: Colors.transparent,
-                  borderRadius: 30,
-                  borderWidth: 1,
-                  buttonSize: 54,
-                  icon: FaIcon(
-                    FontAwesomeIcons.arrowLeft,
-                    color: FlutterFlowTheme.of(context).primaryBtnText,
-                    size: 30,
-                  ),
+                alignment: AlignmentDirectional(-0.84, 0.92),
+                child: FFButtonWidget(
                   onPressed: () async {
                     context.pop();
                   },
+                  text: 'atrás',
+                  icon: FaIcon(
+                    FontAwesomeIcons.arrowLeft,
+                  ),
+                  options: FFButtonOptions(
+                    width: 130,
+                    height: 40,
+                    color: FlutterFlowTheme.of(context).primaryColor,
+                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.white,
+                        ),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
                 ),
               ),
             ],

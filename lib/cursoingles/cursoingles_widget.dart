@@ -185,8 +185,8 @@ class _CursoinglesWidgetState extends State<CursoinglesWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(50),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/FB_IMG_1669390976862[1].jpg',
                                   width: 60,
                                   height: 60,
                                   fit: BoxFit.cover,
@@ -245,8 +245,8 @@ class _CursoinglesWidgetState extends State<CursoinglesWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(50),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1614436163996-25cee5f54290?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/FB_IMG_1669390477246[1].jpg',
                                   width: 60,
                                   height: 60,
                                   fit: BoxFit.cover,

@@ -14,6 +14,8 @@ class LoginWidget extends StatefulWidget {
 class _LoginWidgetState extends State<LoginWidget> {
   TextEditingController? textController1;
   TextEditingController? textController2;
+
+  late bool passwordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -21,6 +23,7 @@ class _LoginWidgetState extends State<LoginWidget> {
     super.initState();
     textController1 = TextEditingController();
     textController2 = TextEditingController();
+    passwordVisibility = false;
   }
 
   @override
@@ -92,17 +95,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                   ),
                   style: FlutterFlowTheme.of(context).subtitle1.override(
                         fontFamily: 'Poppins',
-                        color: Colors.white,
+                        color: FlutterFlowTheme.of(context).primaryBtnText,
+                        fontSize: 20,
                       ),
                   textAlign: TextAlign.center,
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, 0.15),
+                alignment: AlignmentDirectional(0, 0.09),
                 child: TextFormField(
                   controller: textController2,
                   autofocus: true,
-                  obscureText: false,
+                  obscureText: !passwordVisibility,
                   decoration: InputDecoration(
                     hintText: 'CONTRASEÑA',
                     hintStyle: FlutterFlowTheme.of(context).bodyText2,
@@ -146,8 +150,25 @@ class _LoginWidgetState extends State<LoginWidget> {
                         topRight: Radius.circular(4.0),
                       ),
                     ),
+                    suffixIcon: InkWell(
+                      onTap: () => setState(
+                        () => passwordVisibility = !passwordVisibility,
+                      ),
+                      focusNode: FocusNode(skipTraversal: true),
+                      child: Icon(
+                        passwordVisibility
+                            ? Icons.visibility_outlined
+                            : Icons.visibility_off_outlined,
+                        color: Color(0xFF757575),
+                        size: 22,
+                      ),
+                    ),
                   ),
-                  style: FlutterFlowTheme.of(context).bodyText1,
+                  style: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Poppins',
+                        color: FlutterFlowTheme.of(context).primaryBtnText,
+                        fontSize: 18,
+                      ),
                   textAlign: TextAlign.center,
                 ),
               ),

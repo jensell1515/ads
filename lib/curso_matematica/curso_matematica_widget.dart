@@ -185,8 +185,8 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(50),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/IMG-20211124-WA0037[1].jpg',
                                   width: 60,
                                   height: 60,
                                   fit: BoxFit.cover,
@@ -364,8 +364,8 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/MATEMATICAS.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -453,8 +453,8 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/MATEMATICAS.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -542,8 +542,8 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/MATEMATICAS.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -622,8 +622,8 @@ class _CursoMatematicaWidgetState extends State<CursoMatematicaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/MATEMATICAS.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,

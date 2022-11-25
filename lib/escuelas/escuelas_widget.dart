@@ -78,6 +78,9 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
                     Duration(milliseconds: 2000),
                     () => setState(() {}),
                   ),
+                  onFieldSubmitted: (_) async {
+                    Navigator.pop(context);
+                  },
                   obscureText: false,
                   decoration: InputDecoration(
                     labelText: 'Busca una Asignatura',

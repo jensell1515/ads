@@ -65,7 +65,7 @@ class _Clase1quimicaWidgetState extends State<Clase1quimicaWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Quimica concepto',
+                      'Quimica conceptos',
                       style: FlutterFlowTheme.of(context).title2.override(
                             fontFamily: 'Poppins',
                             color: Colors.black,
@@ -358,8 +358,8 @@ class _Clase1quimicaWidgetState extends State<Clase1quimicaWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 24),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('ButtonPrimary pressed ...');
+                onPressed: () async {
+                  context.pushNamed('premium');
                 },
                 text: 'Ver más clases',
                 options: FFButtonOptions(

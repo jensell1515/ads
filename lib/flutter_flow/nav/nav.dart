@@ -57,9 +57,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => CursoinglesWidget(),
             ),
             FFRoute(
-              name: 'cursohistoria',
-              path: 'cursohistoria',
-              builder: (context, params) => CursohistoriaWidget(),
+              name: 'Cursodelengua',
+              path: 'cursodelengua',
+              builder: (context, params) => CursodelenguaWidget(),
             ),
             FFRoute(
               name: 'cursoquimica',
@@ -67,9 +67,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => CursoquimicaWidget(),
             ),
             FFRoute(
-              name: 'Cursodelengua',
-              path: 'cursodelengua',
-              builder: (context, params) => CursodelenguaWidget(),
+              name: 'cursohistoria',
+              path: 'cursohistoria',
+              builder: (context, params) => CursohistoriaWidget(),
             ),
             FFRoute(
               name: 'CursosAEP',
@@ -77,14 +77,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => CursosAEPWidget(),
             ),
             FFRoute(
-              name: 'CursoMatematica',
-              path: 'cursoMatematica',
-              builder: (context, params) => CursoMatematicaWidget(),
-            ),
-            FFRoute(
               name: 'CursosTAC',
               path: 'cursosTAC',
               builder: (context, params) => CursosTACWidget(),
+            ),
+            FFRoute(
+              name: 'CursoMatematica',
+              path: 'cursoMatematica',
+              builder: (context, params) => CursoMatematicaWidget(),
             ),
             FFRoute(
               name: 'cursosGeografia',
@@ -167,9 +167,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => Clase3quimicaWidget(),
             ),
             FFRoute(
+              name: 'clase4quimica',
+              path: 'clase4quimica',
+              builder: (context, params) => Clase4quimicaWidget(),
+            ),
+            FFRoute(
+              name: 'clase5quimica',
+              path: 'clase5quimica',
+              builder: (context, params) => Clase5quimicaWidget(),
+            ),
+            FFRoute(
               name: 'premium',
               path: 'premium',
               builder: (context, params) => PremiumWidget(),
+            ),
+            FFRoute(
+              name: 'PerfilProfesor1',
+              path: 'perfilProfesor1',
+              builder: (context, params) => PerfilProfesor1Widget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),

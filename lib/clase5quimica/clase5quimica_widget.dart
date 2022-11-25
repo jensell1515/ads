@@ -2,27 +2,17 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Clase5inglesWidget extends StatefulWidget {
-  const Clase5inglesWidget({Key? key}) : super(key: key);
+class Clase5quimicaWidget extends StatefulWidget {
+  const Clase5quimicaWidget({Key? key}) : super(key: key);
 
   @override
-  _Clase5inglesWidgetState createState() => _Clase5inglesWidgetState();
+  _Clase5quimicaWidgetState createState() => _Clase5quimicaWidgetState();
 }
 
-class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
+class _Clase5quimicaWidgetState extends State<Clase5quimicaWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void initState() {
-    super.initState();
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      context.pushNamed('escuelas');
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +24,7 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
         automaticallyImplyLeading: false,
         leading: InkWell(
           onTap: () async {
-            context.pushNamed('cursoingles');
+            context.pop();
           },
           child: Icon(
             Icons.chevron_left_rounded,
@@ -43,7 +33,7 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
           ),
         ),
         title: Text(
-          'Adjetivos posesivos',
+          'Valencia',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Poppins',
                 color: Colors.black,
@@ -60,13 +50,11 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Expanded(
-                  child: Image.asset(
-                    'assets/images/adjetivo.webp',
-                    width: MediaQuery.of(context).size.width,
-                    height: 230,
-                    fit: BoxFit.contain,
-                  ),
+                Image.asset(
+                  'assets/images/masa_atmica.jpg',
+                  width: MediaQuery.of(context).size.width,
+                  height: 230,
+                  fit: BoxFit.contain,
                 ),
               ],
             ),
@@ -77,7 +65,7 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Adjetivos posesivos',
+                      'Valencia',
                       style: FlutterFlowTheme.of(context).title2.override(
                             fontFamily: 'Poppins',
                             color: Colors.black,
@@ -94,7 +82,7 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      '2 horas',
+                      '1 hora',
                       style: FlutterFlowTheme.of(context).subtitle1.override(
                             fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).primaryColor,
@@ -111,7 +99,7 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      ' Los adjetivos posesivos identifican a quién le pertenecen las cosas. Los adjetivos posesivos en inglés no sustituyen a un nombre, sino que lo acompañan.\nMy – mi / mis.\nYour – tu/tus.               \nHer – su/ sus (de ella)\nHis – su/ sus (de él)',
+                      'La valencia es el número de electrones que le faltan o debe ceder un elemento químico para completar su último nivel de energía. Estos electrones son los que pone en juego durante una reacción química o para establecer un enlace químico con otro elemento.Un átomo puede tener una o más valencias.',
                       style: FlutterFlowTheme.of(context).bodyText2,
                     ),
                   ),
@@ -373,7 +361,7 @@ class _Clase5inglesWidgetState extends State<Clase5inglesWidget> {
                 onPressed: () async {
                   context.pushNamed('premium');
                 },
-                text: 'Ver más cursos',
+                text: 'Ver más clases',
                 options: FFButtonOptions(
                   width: 300,
                   height: 60,

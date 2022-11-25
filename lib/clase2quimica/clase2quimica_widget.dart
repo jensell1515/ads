@@ -33,7 +33,7 @@ class _Clase2quimicaWidgetState extends State<Clase2quimicaWidget> {
           ),
         ),
         title: Text(
-          'Enlaces quimico',
+          'Enlaces quimicos',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Poppins',
                 color: Colors.black,
@@ -65,7 +65,7 @@ class _Clase2quimicaWidgetState extends State<Clase2quimicaWidget> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Enlaces quimico',
+                      'Enlaces quimicos',
                       style: FlutterFlowTheme.of(context).title2.override(
                             fontFamily: 'Poppins',
                             color: Colors.black,
@@ -358,8 +358,8 @@ class _Clase2quimicaWidgetState extends State<Clase2quimicaWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 24),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('ButtonPrimary pressed ...');
+                onPressed: () async {
+                  context.pushNamed('premium');
                 },
                 text: 'Ver más clases',
                 options: FFButtonOptions(

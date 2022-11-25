@@ -183,13 +183,16 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(50),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
-                                  width: 60,
-                                  height: 60,
-                                  fit: BoxFit.cover,
+                              Align(
+                                alignment: AlignmentDirectional(0, -1),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(50),
+                                  child: Image.asset(
+                                    'assets/images/FB_IMG_1669391105809[1].jpg',
+                                    width: 60,
+                                    height: 60,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -240,8 +243,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(50),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1614436163996-25cee5f54290?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/Screenshot_20221125-111711_Facebook[1].jpg',
                                   width: 60,
                                   height: 60,
                                   fit: BoxFit.cover,
@@ -267,60 +270,6 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                                         fontFamily: 'Poppins',
                                         fontSize: 14,
                                       ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 12, 12, 12),
-                      child: Container(
-                        width: 160,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 4,
-                              color: Color(0x34090F13),
-                              offset: Offset(0, 2),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Padding(
-                          padding:
-                              EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(50),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60',
-                                  width: 60,
-                                  height: 60,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                                child: Text(
-                                  'UserName',
-                                  style: FlutterFlowTheme.of(context).bodyText1,
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                                child: Text(
-                                  'Remove',
-                                  style: FlutterFlowTheme.of(context).bodyText2,
                                 ),
                               ),
                             ],
@@ -371,8 +320,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/lengua.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -460,8 +409,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/lengua.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -544,8 +493,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/lengua.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,
@@ -633,8 +582,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                             children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(26),
-                                child: Image.network(
-                                  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
+                                child: Image.asset(
+                                  'assets/images/lengua.png',
                                   width: 36,
                                   height: 36,
                                   fit: BoxFit.cover,

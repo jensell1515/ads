@@ -3,13 +3,13 @@ export 'login/login_widget.dart' show LoginWidget;
 export 'inicio/inicio_widget.dart' show InicioWidget;
 export 'escuelas/escuelas_widget.dart' show EscuelasWidget;
 export 'cursoingles/cursoingles_widget.dart' show CursoinglesWidget;
-export 'cursohistoria/cursohistoria_widget.dart' show CursohistoriaWidget;
-export 'cursoquimica/cursoquimica_widget.dart' show CursoquimicaWidget;
 export 'cursodelengua/cursodelengua_widget.dart' show CursodelenguaWidget;
+export 'cursoquimica/cursoquimica_widget.dart' show CursoquimicaWidget;
+export 'cursohistoria/cursohistoria_widget.dart' show CursohistoriaWidget;
 export 'cursos_a_e_p/cursos_a_e_p_widget.dart' show CursosAEPWidget;
+export 'cursos_t_a_c/cursos_t_a_c_widget.dart' show CursosTACWidget;
 export 'curso_matematica/curso_matematica_widget.dart'
     show CursoMatematicaWidget;
-export 'cursos_t_a_c/cursos_t_a_c_widget.dart' show CursosTACWidget;
 export 'cursos_geografia/cursos_geografia_widget.dart'
     show CursosGeografiaWidget;
 export 'clase1ingles/clase1ingles_widget.dart' show Clase1inglesWidget;
@@ -27,4 +27,8 @@ export 'clase6historia/clase6historia_widget.dart' show Clase6historiaWidget;
 export 'clase1quimica/clase1quimica_widget.dart' show Clase1quimicaWidget;
 export 'clase2quimica/clase2quimica_widget.dart' show Clase2quimicaWidget;
 export 'clase3quimica/clase3quimica_widget.dart' show Clase3quimicaWidget;
+export 'clase4quimica/clase4quimica_widget.dart' show Clase4quimicaWidget;
+export 'clase5quimica/clase5quimica_widget.dart' show Clase5quimicaWidget;
 export 'premium/premium_widget.dart' show PremiumWidget;
+export 'perfil_profesor1/perfil_profesor1_widget.dart'
+    show PerfilProfesor1Widget;
