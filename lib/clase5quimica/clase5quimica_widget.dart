@@ -51,7 +51,7 @@ class _Clase5quimicaWidgetState extends State<Clase5quimicaWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Image.asset(
-                  'assets/images/masa_atmica.jpg',
+                  'assets/images/valencia_qui.png',
                   width: MediaQuery.of(context).size.width,
                   height: 230,
                   fit: BoxFit.contain,

@@ -1,3 +1,4 @@
+import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -12,24 +13,21 @@ class LoginWidget extends StatefulWidget {
 }
 
 class _LoginWidgetState extends State<LoginWidget> {
-  TextEditingController? textController1;
-  TextEditingController? textController2;
-
-  late bool passwordVisibility;
+  TextEditingController? emailTextController;
+  TextEditingController? passwordTextController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController();
-    textController2 = TextEditingController();
-    passwordVisibility = false;
+    emailTextController = TextEditingController();
+    passwordTextController = TextEditingController();
   }
 
   @override
   void dispose() {
-    textController1?.dispose();
-    textController2?.dispose();
+    emailTextController?.dispose();
+    passwordTextController?.dispose();
     super.dispose();
   }
 
@@ -46,11 +44,11 @@ class _LoginWidgetState extends State<LoginWidget> {
               Align(
                 alignment: AlignmentDirectional(0, -0.05),
                 child: TextFormField(
-                  controller: textController1,
+                  controller: emailTextController,
                   autofocus: true,
                   obscureText: false,
                   decoration: InputDecoration(
-                    hintText: 'CORREO ELECTRONICO',
+                    hintText: currentUserEmail,
                     hintStyle: FlutterFlowTheme.of(context).bodyText2,
                     enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(
@@ -104,9 +102,9 @@ class _LoginWidgetState extends State<LoginWidget> {
               Align(
                 alignment: AlignmentDirectional(0, 0.09),
                 child: TextFormField(
-                  controller: textController2,
+                  controller: passwordTextController,
                   autofocus: true,
-                  obscureText: !passwordVisibility,
+                  obscureText: false,
                   decoration: InputDecoration(
                     hintText: 'CONTRASEÑA',
                     hintStyle: FlutterFlowTheme.of(context).bodyText2,
@@ -150,19 +148,6 @@ class _LoginWidgetState extends State<LoginWidget> {
                         topRight: Radius.circular(4.0),
                       ),
                     ),
-                    suffixIcon: InkWell(
-                      onTap: () => setState(
-                        () => passwordVisibility = !passwordVisibility,
-                      ),
-                      focusNode: FocusNode(skipTraversal: true),
-                      child: Icon(
-                        passwordVisibility
-                            ? Icons.visibility_outlined
-                            : Icons.visibility_off_outlined,
-                        color: Color(0xFF757575),
-                        size: 22,
-                      ),
-                    ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Poppins',
@@ -182,7 +167,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.1, -0.25),
+                alignment: AlignmentDirectional(0.21, -0.22),
                 child: SelectionArea(
                     child: Text(
                   'Bienvenido al mundo del conocimiento',
@@ -210,7 +195,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                 alignment: AlignmentDirectional(-0.03, 0.33),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed('escuelas');
+                    GoRouter.of(context).prepareAuthEvent();
+
+                    final user = await createAccountWithEmail(
+                      context,
+                      emailTextController!.text,
+                      passwordTextController!.text,
+                    );
+                    if (user == null) {
+                      return;
+                    }
+
+                    context.goNamedAuth('Inicio', mounted);
                   },
                   text: 'Iniciar Sesion',
                   options: FFButtonOptions(

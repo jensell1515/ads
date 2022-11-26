@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import '../flutter_flow_theme.dart';
+import '../../backend/backend.dart';
+import '../../auth/firebase_user_provider.dart';
 
 import '../../index.dart';
 import '../../main.dart';
@@ -17,7 +19,43 @@ export 'serialization_util.dart';
 const kTransitionInfoKey = '__transition_info__';
 
 class AppStateNotifier extends ChangeNotifier {
+  AcademiaDelSaberFirebaseUser? initialUser;
+  AcademiaDelSaberFirebaseUser? user;
   bool showSplashImage = true;
+  String? _redirectLocation;
+
+  /// Determines whether the app will refresh and build again when a sign
+  /// in or sign out happens. This is useful when the app is launched or
+  /// on an unexpected logout. However, this must be turned off when we
+  /// intend to sign in/out and then navigate or perform any actions after.
+  /// Otherwise, this will trigger a refresh and interrupt the action(s).
+  bool notifyOnAuthChange = true;
+
+  bool get loading => user == null || showSplashImage;
+  bool get loggedIn => user?.loggedIn ?? false;
+  bool get initiallyLoggedIn => initialUser?.loggedIn ?? false;
+  bool get shouldRedirect => loggedIn && _redirectLocation != null;
+
+  String getRedirectLocation() => _redirectLocation!;
+  bool hasRedirect() => _redirectLocation != null;
+  void setRedirectLocationIfUnset(String loc) => _redirectLocation ??= loc;
+  void clearRedirectLocation() => _redirectLocation = null;
+
+  /// Mark as not needing to notify on a sign in / out when we intend
+  /// to perform subsequent actions (such as navigation) afterwards.
+  void updateNotifyOnAuthChange(bool notify) => notifyOnAuthChange = notify;
+
+  void update(AcademiaDelSaberFirebaseUser newUser) {
+    initialUser ??= newUser;
+    user = newUser;
+    // Refresh the app on auth change unless explicitly marked otherwise.
+    if (notifyOnAuthChange) {
+      notifyListeners();
+    }
+    // Once again mark the notifier as needing to update on auth change
+    // (in order to catch sign in / out events).
+    updateNotifyOnAuthChange(true);
+  }
 
   void stopShowingSplashImage() {
     showSplashImage = false;
@@ -29,12 +67,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => LoginWidget(),
+      errorBuilder: (context, _) =>
+          appStateNotifier.loggedIn ? InicioWidget() : LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => LoginWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? InicioWidget() : LoginWidget(),
           routes: [
             FFRoute(
               name: 'login',
@@ -57,9 +97,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => CursoinglesWidget(),
             ),
             FFRoute(
-              name: 'Cursodelengua',
-              path: 'cursodelengua',
-              builder: (context, params) => CursodelenguaWidget(),
+              name: 'cursohistoria',
+              path: 'cursohistoria',
+              builder: (context, params) => CursohistoriaWidget(),
             ),
             FFRoute(
               name: 'cursoquimica',
@@ -67,19 +107,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => CursoquimicaWidget(),
             ),
             FFRoute(
-              name: 'cursohistoria',
-              path: 'cursohistoria',
-              builder: (context, params) => CursohistoriaWidget(),
+              name: 'Cursodelengua',
+              path: 'cursodelengua',
+              builder: (context, params) => CursodelenguaWidget(),
             ),
             FFRoute(
               name: 'CursosAEP',
               path: 'cursosAEP',
               builder: (context, params) => CursosAEPWidget(),
-            ),
-            FFRoute(
-              name: 'CursosTAC',
-              path: 'cursosTAC',
-              builder: (context, params) => CursosTACWidget(),
             ),
             FFRoute(
               name: 'CursoMatematica',
@@ -132,6 +167,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => Clase2historiaWidget(),
             ),
             FFRoute(
+              name: 'clase2quimica',
+              path: 'clase2quimica',
+              builder: (context, params) => Clase2quimicaWidget(),
+            ),
+            FFRoute(
               name: 'clase3historia',
               path: 'clase3historia',
               builder: (context, params) => Clase3historiaWidget(),
@@ -157,11 +197,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => Clase1quimicaWidget(),
             ),
             FFRoute(
-              name: 'clase2quimica',
-              path: 'clase2quimica',
-              builder: (context, params) => Clase2quimicaWidget(),
-            ),
-            FFRoute(
               name: 'clase3quimica',
               path: 'clase3quimica',
               builder: (context, params) => Clase3quimicaWidget(),
@@ -177,14 +212,129 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => Clase5quimicaWidget(),
             ),
             FFRoute(
+              name: 'clase6quimica',
+              path: 'clase6quimica',
+              builder: (context, params) => Clase6quimicaWidget(),
+            ),
+            FFRoute(
+              name: 'clase1lengua',
+              path: 'clase1lengua',
+              builder: (context, params) => Clase1lenguaWidget(),
+            ),
+            FFRoute(
+              name: 'clase2lengua',
+              path: 'clase2lengua',
+              builder: (context, params) => Clase2lenguaWidget(),
+            ),
+            FFRoute(
+              name: 'clase4lengua',
+              path: 'clase4lengua',
+              builder: (context, params) => Clase4lenguaWidget(),
+            ),
+            FFRoute(
+              name: 'clase3lengua',
+              path: 'clase3lengua',
+              builder: (context, params) => Clase3lenguaWidget(),
+            ),
+            FFRoute(
+              name: 'clase1AEP',
+              path: 'clase1AEP',
+              builder: (context, params) => Clase1AEPWidget(),
+            ),
+            FFRoute(
+              name: 'clase2AEP',
+              path: 'clase2AEP',
+              builder: (context, params) => Clase2AEPWidget(),
+            ),
+            FFRoute(
+              name: 'clase3AEP',
+              path: 'clase3AEP',
+              builder: (context, params) => Clase3AEPWidget(),
+            ),
+            FFRoute(
+              name: 'clase1matematica',
+              path: 'clase1matematica',
+              builder: (context, params) => Clase1matematicaWidget(),
+            ),
+            FFRoute(
+              name: 'clase2matematicas',
+              path: 'clase2matematicas',
+              builder: (context, params) => Clase2matematicasWidget(),
+            ),
+            FFRoute(
+              name: 'clase3matematicas',
+              path: 'clase3matematicas',
+              builder: (context, params) => Clase3matematicasWidget(),
+            ),
+            FFRoute(
+              name: 'clase4matematicas',
+              path: 'clase4matematicas',
+              builder: (context, params) => Clase4matematicasWidget(),
+            ),
+            FFRoute(
+              name: 'clase1geografia',
+              path: 'clase1geografia',
+              builder: (context, params) => Clase1geografiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase2geografia',
+              path: 'clase2geografia',
+              builder: (context, params) => Clase2geografiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase3geografia',
+              path: 'clase3geografia',
+              builder: (context, params) => Clase3geografiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase4geografia',
+              path: 'clase4geografia',
+              builder: (context, params) => Clase4geografiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase5geografia',
+              path: 'clase5geografia',
+              builder: (context, params) => Clase5geografiaWidget(),
+            ),
+            FFRoute(
+              name: 'clase6geografia',
+              path: 'clase6geografia',
+              builder: (context, params) => Clase6geografiaWidget(),
+            ),
+            FFRoute(
+              name: 'paginaprofesor1',
+              path: 'paginaprofesor1',
+              builder: (context, params) => Paginaprofesor1Widget(),
+            ),
+            FFRoute(
+              name: 'paginaProfesor2',
+              path: 'paginaProfesor2',
+              builder: (context, params) => PaginaProfesor2Widget(),
+            ),
+            FFRoute(
+              name: 'paginaProfesor3',
+              path: 'paginaProfesor3',
+              builder: (context, params) => PaginaProfesor3Widget(),
+            ),
+            FFRoute(
+              name: 'paginaProfesor4',
+              path: 'paginaProfesor4',
+              builder: (context, params) => PaginaProfesor4Widget(),
+            ),
+            FFRoute(
+              name: 'paginaProfesor5',
+              path: 'paginaProfesor5',
+              builder: (context, params) => PaginaProfesor5Widget(),
+            ),
+            FFRoute(
+              name: 'paginaProfesor6',
+              path: 'paginaProfesor6',
+              builder: (context, params) => PaginaProfesor6Widget(),
+            ),
+            FFRoute(
               name: 'premium',
               path: 'premium',
               builder: (context, params) => PremiumWidget(),
-            ),
-            FFRoute(
-              name: 'PerfilProfesor1',
-              path: 'perfilProfesor1',
-              builder: (context, params) => PerfilProfesor1Widget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
@@ -198,6 +348,56 @@ extension NavParamExtensions on Map<String, String?> {
             .where((e) => e.value != null)
             .map((e) => MapEntry(e.key, e.value!)),
       );
+}
+
+extension NavigationExtensions on BuildContext {
+  void goNamedAuth(
+    String name,
+    bool mounted, {
+    Map<String, String> params = const <String, String>{},
+    Map<String, String> queryParams = const <String, String>{},
+    Object? extra,
+    bool ignoreRedirect = false,
+  }) =>
+      !mounted || GoRouter.of(this).shouldRedirect(ignoreRedirect)
+          ? null
+          : goNamed(
+              name,
+              params: params,
+              queryParams: queryParams,
+              extra: extra,
+            );
+
+  void pushNamedAuth(
+    String name,
+    bool mounted, {
+    Map<String, String> params = const <String, String>{},
+    Map<String, String> queryParams = const <String, String>{},
+    Object? extra,
+    bool ignoreRedirect = false,
+  }) =>
+      !mounted || GoRouter.of(this).shouldRedirect(ignoreRedirect)
+          ? null
+          : pushNamed(
+              name,
+              params: params,
+              queryParams: queryParams,
+              extra: extra,
+            );
+}
+
+extension GoRouterExtensions on GoRouter {
+  AppStateNotifier get appState =>
+      (routerDelegate.refreshListenable as AppStateNotifier);
+  void prepareAuthEvent([bool ignoreRedirect = false]) =>
+      appState.hasRedirect() && !ignoreRedirect
+          ? null
+          : appState.updateNotifyOnAuthChange(false);
+  bool shouldRedirect(bool ignoreRedirect) =>
+      !ignoreRedirect && appState.hasRedirect();
+  void setRedirectLocationIfUnset(String location) =>
+      (routerDelegate.refreshListenable as AppStateNotifier)
+          .updateNotifyOnAuthChange(false);
 }
 
 extension _GoRouterStateExtensions on GoRouterState {
@@ -247,6 +447,7 @@ class FFParameters {
     String paramName,
     ParamType type, [
     bool isList = false,
+    String? collectionName,
   ]) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -260,11 +461,7 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(
-      param,
-      type,
-      isList,
-    );
+    return deserializeParam<T>(param, type, isList, collectionName);
   }
 }
 
@@ -288,6 +485,19 @@ class FFRoute {
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
         name: name,
         path: path,
+        redirect: (state) {
+          if (appStateNotifier.shouldRedirect) {
+            final redirectLocation = appStateNotifier.getRedirectLocation();
+            appStateNotifier.clearRedirectLocation();
+            return redirectLocation;
+          }
+
+          if (requireAuth && !appStateNotifier.loggedIn) {
+            appStateNotifier.setRedirectLocationIfUnset(state.location);
+            return '/login';
+          }
+          return null;
+        },
         pageBuilder: (context, state) {
           final ffParams = FFParameters(state, asyncParams);
           final page = ffParams.hasFutures
@@ -296,7 +506,17 @@ class FFRoute {
                   builder: (context, _) => builder(context, ffParams),
                 )
               : builder(context, ffParams);
-          final child = page;
+          final child = appStateNotifier.loading
+              ? Center(
+                  child: SizedBox(
+                    width: 50,
+                    height: 50,
+                    child: CircularProgressIndicator(
+                      color: FlutterFlowTheme.of(context).primaryColor,
+                    ),
+                  ),
+                )
+              : page;
 
           final transitionInfo = state.transitionInfo;
           return transitionInfo.hasTransition

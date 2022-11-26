@@ -1,4 +1,3 @@
-import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -37,28 +36,10 @@ class _EscuelasWidgetState extends State<EscuelasWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'Hola',
+          'Bienvenido                                   ADS',
           style: FlutterFlowTheme.of(context).title2,
         ),
-        actions: [
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 12, 0),
-            child: FlutterFlowIconButton(
-              borderColor: Colors.transparent,
-              borderRadius: 30,
-              borderWidth: 1,
-              buttonSize: 60,
-              icon: Icon(
-                Icons.notifications_none,
-                color: FlutterFlowTheme.of(context).secondaryText,
-                size: 30,
-              ),
-              onPressed: () {
-                print('IconButton pressed ...');
-              },
-            ),
-          ),
-        ],
+        actions: [],
         centerTitle: false,
         elevation: 0,
       ),

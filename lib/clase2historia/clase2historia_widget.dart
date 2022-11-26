@@ -2,6 +2,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Clase2historiaWidget extends StatefulWidget {
@@ -13,6 +14,15 @@ class Clase2historiaWidget extends StatefulWidget {
 
 class _Clase2historiaWidgetState extends State<Clase2historiaWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      context.pushNamed('premium');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

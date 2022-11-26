@@ -198,50 +198,55 @@ class _CursoquimicaWidgetState extends State<CursoquimicaWidget> {
                         child: Padding(
                           padding:
                               EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(50),
-                                child: Image.asset(
-                                  'assets/images/FB_IMG_1669391001696[1].jpg',
-                                  width: 60,
-                                  height: 60,
-                                  fit: BoxFit.cover,
+                          child: InkWell(
+                            onTap: () async {
+                              context.pushNamed('paginaProfesor6');
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(50),
+                                  child: Image.asset(
+                                    'assets/images/FB_IMG_1669391001696[1].jpg',
+                                    width: 60,
+                                    height: 60,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                                child: Text(
-                                  'Profe Ligia',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Colors.black,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
-                                      ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 8, 0, 0),
+                                  child: Text(
+                                    'Profe Ligia',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Colors.black,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                                child: Text(
-                                  'Quimica',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText2
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF57636C),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.normal,
-                                      ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 4, 0, 0),
+                                  child: Text(
+                                    'Quimica',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText2
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Color(0xFF57636C),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -821,8 +826,8 @@ class _CursoquimicaWidgetState extends State<CursoquimicaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase5quimica');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -910,8 +915,8 @@ class _CursoquimicaWidgetState extends State<CursoquimicaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase6quimica');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(

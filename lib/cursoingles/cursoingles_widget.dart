@@ -33,7 +33,7 @@ class _CursoinglesWidgetState extends State<CursoinglesWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: FlutterFlowTheme.of(context).gray200,
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
@@ -179,42 +179,48 @@ class _CursoinglesWidgetState extends State<CursoinglesWidget> {
                         child: Padding(
                           padding:
                               EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(50),
-                                child: Image.asset(
-                                  'assets/images/FB_IMG_1669390976862[1].jpg',
-                                  width: 60,
-                                  height: 60,
-                                  fit: BoxFit.cover,
+                          child: InkWell(
+                            onTap: () async {
+                              context.pushNamed('paginaProfesor2');
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(50),
+                                  child: Image.asset(
+                                    'assets/images/FB_IMG_1669390976862[1].jpg',
+                                    width: 60,
+                                    height: 60,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                                child: Text(
-                                  'Profe Favio',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Poppins',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                      ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 8, 0, 0),
+                                  child: Text(
+                                    'Profe Favio',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                        ),
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                                child: Text(
-                                  'Ingles B2',
-                                  style: FlutterFlowTheme.of(context).bodyText2,
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 4, 0, 0),
+                                  child: Text(
+                                    'Ingles B2',
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyText2,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -239,36 +245,43 @@ class _CursoinglesWidgetState extends State<CursoinglesWidget> {
                         child: Padding(
                           padding:
                               EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(50),
-                                child: Image.asset(
-                                  'assets/images/FB_IMG_1669390477246[1].jpg',
-                                  width: 60,
-                                  height: 60,
-                                  fit: BoxFit.cover,
+                          child: InkWell(
+                            onTap: () async {
+                              context.pushNamed('paginaProfesor3');
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(50),
+                                  child: Image.asset(
+                                    'assets/images/FB_IMG_1669390477246[1].jpg',
+                                    width: 60,
+                                    height: 60,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                                child: Text(
-                                  'Profe Iskra',
-                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 8, 0, 0),
+                                  child: Text(
+                                    'Profe Iskra',
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyText1,
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                                child: Text(
-                                  'Ingles A1',
-                                  style: FlutterFlowTheme.of(context).bodyText2,
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 4, 0, 0),
+                                  child: Text(
+                                    'Ingles A1',
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyText2,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),

@@ -292,8 +292,8 @@ class _CursosAEPWidgetState extends State<CursosAEPWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase1AEP');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -381,8 +381,8 @@ class _CursosAEPWidgetState extends State<CursosAEPWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase2AEP');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -470,8 +470,8 @@ class _CursosAEPWidgetState extends State<CursosAEPWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase3AEP');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(

@@ -37,7 +37,7 @@ class _InicioWidgetState extends State<InicioWidget> {
                 alignment: AlignmentDirectional(0.05, 0.3),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed('login');
+                    context.pushNamed('escuelas');
                   },
                   text: 'Entrar',
                   options: FFButtonOptions(

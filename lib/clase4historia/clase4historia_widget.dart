@@ -358,8 +358,8 @@ class _Clase4historiaWidgetState extends State<Clase4historiaWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 24),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('ButtonPrimary pressed ...');
+                onPressed: () async {
+                  context.pushNamed('premium');
                 },
                 text: 'Ver más clases',
                 options: FFButtonOptions(

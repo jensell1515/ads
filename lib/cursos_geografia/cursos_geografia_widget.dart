@@ -198,51 +198,56 @@ class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
                         child: Padding(
                           padding:
                               EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(50),
-                                child: Image.asset(
-                                  'assets/images/FB_IMG_1669399466693[1].jpg',
-                                  width: 60,
-                                  height: 60,
-                                  fit: BoxFit.cover,
+                          child: InkWell(
+                            onTap: () async {
+                              context.pushNamed('paginaProfesor4');
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(50),
+                                  child: Image.asset(
+                                    'assets/images/FB_IMG_1669399466693[1].jpg',
+                                    width: 60,
+                                    height: 60,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                                child: Text(
-                                  'Estela Pauth',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
-                                      ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 8, 0, 0),
+                                  child: Text(
+                                    'Estela Pauth',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                                child: Text(
-                                  'Geografía',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText2
-                                      .override(
-                                        fontFamily: 'Outfit',
-                                        color: Color(0xFF57636C),
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w600,
-                                      ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 4, 0, 0),
+                                  child: Text(
+                                    'Geografía',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText2
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Color(0xFF57636C),
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -468,8 +473,8 @@ class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase1geografia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -559,8 +564,8 @@ class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase2geografia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -650,8 +655,8 @@ class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase3geografia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -741,8 +746,8 @@ class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase4geografia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -832,8 +837,8 @@ class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase5geografia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -923,8 +928,8 @@ class _CursosGeografiaWidgetState extends State<CursosGeografiaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase6geografia');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(

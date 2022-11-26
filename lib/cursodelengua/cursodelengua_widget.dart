@@ -33,7 +33,7 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
@@ -179,40 +179,47 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                         child: Padding(
                           padding:
                               EdgeInsetsDirectional.fromSTEB(12, 12, 12, 12),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Align(
-                                alignment: AlignmentDirectional(0, -1),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(50),
-                                  child: Image.asset(
-                                    'assets/images/FB_IMG_1669391105809[1].jpg',
-                                    width: 60,
-                                    height: 60,
-                                    fit: BoxFit.cover,
+                          child: InkWell(
+                            onTap: () async {
+                              context.pushNamed('paginaProfesor5');
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, -1),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(50),
+                                    child: Image.asset(
+                                      'assets/images/FB_IMG_1669391105809[1].jpg',
+                                      width: 60,
+                                      height: 60,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
-                                child: Text(
-                                  'Profe Santos',
-                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 8, 0, 0),
+                                  child: Text(
+                                    'Profe Santos',
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyText1,
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                                child: Text(
-                                  'Lengua y Literatura',
-                                  textAlign: TextAlign.center,
-                                  style: FlutterFlowTheme.of(context).bodyText2,
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 4, 0, 0),
+                                  child: Text(
+                                    'Lengua y Literatura',
+                                    textAlign: TextAlign.center,
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyText2,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -356,8 +363,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase1lengua');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -440,8 +447,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase2lengua');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -529,8 +536,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase3lengua');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
@@ -618,8 +625,8 @@ class _CursodelenguaWidgetState extends State<CursodelenguaWidget> {
                                 ),
                               ),
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('clase4lengua');
                                 },
                                 text: 'Ver',
                                 options: FFButtonOptions(
